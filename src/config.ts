@@ -1,6 +1,6 @@
 export const siteConfig = {
   name: "Rayane Sdiri",
-  title: "Senior Software Engineer",
+  title: "University Student",
   description: "Portfolio website of Rayane Sdiri",
   accentColor: "#1d4ed8",
   social: {
