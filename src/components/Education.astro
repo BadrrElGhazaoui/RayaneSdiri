@@ -12,10 +12,16 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
               Education
             </h2>
-            <div
-              class="w-[75px] h-[5px] mt-2 rounded-full"
-              style={`background-color: ${siteConfig.accentColor}`}
-            />
+            <div class="mt-2 flex gap-1">
+              <span
+                class="h-[5px] w-[52px] rounded-full"
+                style={`background-color: ${siteConfig.accentColor}`}
+              />
+              <span
+                class="h-[5px] w-[22px] rounded-full"
+                style={`background-color: ${siteConfig.secondaryColor}`}
+              />
+            </div>
           </div>
 
           <div class="lg:col-span-8">
@@ -29,7 +35,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                       </h3>
                       <p
                         class="text-base sm:text-lg"
-                        style={`color: ${siteConfig.accentColor}`}
+                        style={`color: ${siteConfig.secondaryColor}`}
                       >
                         {edu.school}
                       </p>

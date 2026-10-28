@@ -2,7 +2,9 @@ export const siteConfig = {
   name: "Rayane Sdiri",
   title: "University Student",
   description: "Portfolio website of Rayane Sdiri",
-  accentColor: "#1d4ed8",
+  accentColor: "#d60000",
+  secondaryColor: "#185c28",
+  deepAccentColor: "#780000",
   social: {
     email: "rayanesdiri20@gmail.com",
     linkedin: "https://www.linkedin.com/in/rayane-sdiri-8048593a9/",

@@ -11,10 +11,15 @@ import { siteConfig } from "../config";
         >
           About Me
         </h2>
-        <div
-          class="w-[75px] h-[5px] mt-2 rounded-full"
-          style={`background-color: ${siteConfig.accentColor}`}
-        >
+        <div class="mt-2 flex gap-1">
+          <span
+            class="h-[5px] w-[52px] rounded-full"
+            style={`background-color: ${siteConfig.accentColor}`}
+          />
+          <span
+            class="h-[5px] w-[22px] rounded-full"
+            style={`background-color: ${siteConfig.secondaryColor}`}
+          />
         </div>
       </div>
 
@@ -27,7 +32,10 @@ import { siteConfig } from "../config";
           <div class="flex flex-wrap gap-3">
             {
               siteConfig.skills.map((skill) => (
-                <span class="px-3 sm:px-4 py-1.5 sm:py-2 bg-gray-100 text-gray-800 rounded-full text-sm sm:text-base md:text-lg font-medium hover:bg-gray-200 transition-colors duration-200">
+                <span
+                  class="px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-sm sm:text-base md:text-lg font-medium transition-colors duration-200"
+                  style={`background-color: ${siteConfig.secondaryColor}12; color: ${siteConfig.secondaryColor}`}
+                >
                   {skill}
                 </span>
               ))

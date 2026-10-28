@@ -9,13 +9,14 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 <header
   id="header"
   class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
+  style={`--accent-color: ${siteConfig.accentColor}`}
 >
   <nav class="max-w-7xl mx-auto px-8 py-4">
     <ul class="flex items-center gap-8 justify-center">
       <li>
         <a
           href="#about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
+          class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
         >
           About
         </a>
@@ -25,7 +26,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
             >
               Projects
             </a>
@@ -37,7 +38,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
             >
               Experience
             </a>
@@ -49,7 +50,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           <li>
             <a
               href="#education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
+              class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
             >
               Education
             </a>
