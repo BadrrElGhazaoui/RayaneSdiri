@@ -12,7 +12,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
   style={`--accent-color: ${siteConfig.accentColor}`}
 >
   <nav class="max-w-7xl mx-auto px-8 py-4">
-    <ul class="flex items-center gap-8 justify-center">
+    <ul class="flex items-center justify-center gap-7">
       <li>
         <a
           href="#about"
@@ -25,14 +25,22 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         hasProjects && (
           <li>
             <a
-              href="#projects"
+              href="#media"
               class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
             >
-              Projects
+              Media
             </a>
           </li>
         )
       }
+      <li>
+        <a
+          href="#highlights"
+          class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
+        >
+          Highlights
+        </a>
+      </li>
       {
         hasExperience && (
           <li>
@@ -40,7 +48,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
               href="#experience"
               class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
             >
-              Experience
+              Community
             </a>
           </li>
         )
@@ -57,6 +65,14 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           </li>
         )
       }
+      <li>
+        <a
+          href="#contact"
+          class="text-gray-700 hover:text-[var(--accent-color)] transition-colors font-medium"
+        >
+          Contact
+        </a>
+      </li>
     </ul>
   </nav>
 </header>

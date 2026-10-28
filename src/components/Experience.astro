@@ -9,9 +9,12 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Experience
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900">
+              Volunteering & Community
             </h2>
+            <p class="mt-4 max-w-xs text-sm leading-6 text-gray-600">
+              Volunteer and event roles across fencing, youth culture, and sport. No professional work experience yet.
+            </p>
             <div class="mt-2 flex gap-1">
               <span
                 class="h-[5px] w-[52px] rounded-full"
@@ -53,9 +56,13 @@ const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
                           {exp.company}
                         </p>
                       </div>
-                      <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
-                        {exp.dateRange}
-                      </span>
+                      {
+                        exp.dateRange && (
+                          <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                            {exp.dateRange}
+                          </span>
+                        )
+                      }
                     </div>
 
                     <ul class="space-y-2">

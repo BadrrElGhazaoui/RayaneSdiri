@@ -7,6 +7,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 ---
 
 <footer
+  id="contact"
   class="relative border-t-4 bg-gray-50"
   style={`border-color: ${siteConfig.accentColor}`}
 >
@@ -19,7 +20,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           {siteConfig.name}
         </h3>
         <p class="text-base text-gray-600">
-          {siteConfig.title}
+          National-Team Fencer · Sports Technology Student
         </p>
         <div class="flex gap-x-6">
           <a
@@ -98,10 +99,26 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             >
           </a>
         </div>
+        <div class="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-600">
+          <a
+            href={`tel:${siteConfig.phone.replaceAll(" ", "")}`}
+            class="transition-colors hover:text-gray-900"
+          >
+            {siteConfig.phone}
+          </a>
+          <a
+            href={siteConfig.social.tiktok}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="transition-colors hover:text-gray-900"
+          >
+            TikTok <span aria-hidden="true">↗</span>
+          </a>
+        </div>
       </div>
 
-      <div class="hidden md:block flex flex-col md:items-end gap-4">
-        <nav class="flex gap-x-8">
+      <div class="flex flex-col gap-4 md:items-end">
+        <nav class="flex flex-wrap gap-x-6 gap-y-3">
           <a
             href="#about"
             class="text-sm text-gray-600 hover:text-gray-900 transition-colors"
@@ -110,10 +127,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
           {
             hasProjects && (
               <a
-                href="#projects"
+                href="#media"
                 class="text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
-                Projects
+                Media
               </a>
             )
           }
@@ -123,10 +140,16 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                 href="#experience"
                 class="text-sm text-gray-600 hover:text-gray-900 transition-colors"
               >
-                Experience
+                Community
               </a>
             )
           }
+          <a
+            href="#highlights"
+            class="text-sm text-gray-600 hover:text-gray-900 transition-colors"
+          >
+            Highlights
+          </a>
           {
             hasEducation && (
               <a

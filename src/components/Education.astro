@@ -1,64 +1,109 @@
 ---
 import { siteConfig } from "../config";
-const hasEducation = siteConfig.education && siteConfig.education.length > 0;
+
+const hasEducation = siteConfig.education.length > 0;
+const hasCertificates = siteConfig.certificates.length > 0;
 ---
 
 {
-  hasEducation && (
-    <section id="education" class="p-8 sm:p-12 md:p-16 lg:p-24">
-      <div>
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
-          <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Education
-            </h2>
-            <div class="mt-2 flex gap-1">
-              <span
-                class="h-[5px] w-[52px] rounded-full"
-                style={`background-color: ${siteConfig.accentColor}`}
-              />
-              <span
-                class="h-[5px] w-[22px] rounded-full"
-                style={`background-color: ${siteConfig.secondaryColor}`}
-              />
-            </div>
+  (hasEducation || hasCertificates) && (
+    <section id="education" class="scroll-mt-24 bg-gray-50 px-6 py-20 sm:px-10 sm:py-24 lg:px-16">
+      <div class="mx-auto max-w-6xl">
+        <div class="mb-12">
+          <p
+            class="text-xs font-bold uppercase tracking-[0.2em]"
+            style={`color: ${siteConfig.secondaryColor}`}
+          >
+            Learning & development
+          </p>
+          <h2 class="mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+            Education & Training
+          </h2>
+          <div class="mt-4 flex gap-1">
+            <span
+              class="h-1 w-14 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+            <span
+              class="h-1 w-6 rounded-full"
+              style={`background-color: ${siteConfig.secondaryColor}`}
+            />
           </div>
+        </div>
 
-          <div class="lg:col-span-8">
-            <div class="space-y-8">
-              {siteConfig.education.map((edu) => (
-                <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
-                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                    <div>
-                      <h3 class="text-lg sm:text-xl font-semibold text-gray-900">
-                        {edu.degree}
-                      </h3>
-                      <p
-                        class="text-base sm:text-lg"
-                        style={`color: ${siteConfig.secondaryColor}`}
-                      >
-                        {edu.school}
-                      </p>
-                    </div>
-                    <span class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
-                      {edu.dateRange}
-                    </span>
-                  </div>
-
-                  <ul class="space-y-2">
-                    {edu.achievements.map((achievement) => (
-                      <li class="flex items-start">
-                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0" />
-                        <span class="text-sm sm:text-base text-gray-600">
-                          {achievement}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
+        <div class="grid gap-14 lg:grid-cols-2 lg:gap-16">
+          {
+            hasEducation && (
+              <div>
+                <h3 class="mb-6 text-2xl font-bold text-gray-900">Education</h3>
+                <div class="space-y-4">
+                  {siteConfig.education.map((edu, index) => (
+                    <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                      <div class="flex flex-wrap items-start justify-between gap-3">
+                        <div>
+                          <h4 class="text-lg font-bold text-gray-900">
+                            {edu.degree}
+                          </h4>
+                          <p
+                            class="mt-1 font-medium"
+                            style={`color: ${index === 0 ? siteConfig.secondaryColor : siteConfig.deepAccentColor}`}
+                          >
+                            {edu.school}
+                          </p>
+                        </div>
+                        {edu.dateRange && (
+                          <span class="rounded-full bg-gray-100 px-3 py-1 text-xs font-medium text-gray-600">
+                            {edu.dateRange}
+                          </span>
+                        )}
+                      </div>
+                      <ul class="mt-5 space-y-2">
+                        {edu.achievements.map((achievement) => (
+                          <li class="flex items-start gap-3 text-sm leading-6 text-gray-600">
+                            <span
+                              class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full"
+                              style={`background-color: ${siteConfig.accentColor}`}
+                            />
+                            {achievement}
+                          </li>
+                        ))}
+                      </ul>
+                    </article>
+                  ))}
                 </div>
-              ))}
-            </div>
-          </div>
+              </div>
+            )
+          }
+
+          {
+            hasCertificates && (
+              <div>
+                <h3 class="mb-6 text-2xl font-bold text-gray-900">
+                  Certificates & Training
+                </h3>
+                <div class="space-y-4">
+                  {siteConfig.certificates.map((certificate, index) => (
+                    <article class="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+                      <div class="flex flex-wrap items-start justify-between gap-3">
+                        <h4 class="text-lg font-bold text-gray-900">
+                          {certificate.title}
+                        </h4>
+                        <span
+                          class="rounded-full px-3 py-1 text-xs font-semibold"
+                          style={`background-color: ${index === 0 ? `${siteConfig.accentColor}12` : `${siteConfig.secondaryColor}12`}; color: ${index === 0 ? siteConfig.deepAccentColor : siteConfig.secondaryColor}`}
+                        >
+                          {certificate.dateRange}
+                        </span>
+                      </div>
+                      <p class="mt-2 text-sm leading-6 text-gray-600">
+                        {certificate.issuer}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            )
+          }
         </div>
       </div>
     </section>
