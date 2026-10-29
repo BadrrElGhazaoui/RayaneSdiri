@@ -12,6 +12,8 @@ export const siteConfig = {
     email: "rayanesdiri20@gmail.com",
     linkedin: "https://www.linkedin.com/in/rayane-sdiri-8048593a9/",
     github: "https://github.com/BadrrElGhazaoui/RayaneSdiri",
+    instagram:
+      "https://www.instagram.com/_rayanesdirii?exln=MXFoaGN4NDg3c3FoYQ%3D%3D&utm_source=qr",
     tiktok: "https://www.tiktok.com/@fencing_with_rayane",
   },
   aboutMe:
@@ -76,6 +78,7 @@ export const siteConfig = {
       name: "Instagram Fencing Series",
       description:
         "Short-form episodes sharing my fencing journey, training, and sporting lifestyle while highlighting the values of the sport.",
+      link: "https://www.instagram.com/_rayanesdirii?exln=MXFoaGN4NDg3c3FoYQ%3D%3D&utm_source=qr",
       skills: ["Instagram", "Fencing", "Video editing"],
     },
     {

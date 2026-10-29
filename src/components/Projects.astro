@@ -10,7 +10,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
             <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Media & Collaborations
+              Media
             </h2>
             <div class="mt-2 flex gap-1">
               <span
@@ -22,6 +22,30 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                 style={`background-color: ${siteConfig.secondaryColor}`}
               />
             </div>
+            <a
+              href={siteConfig.social.instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Visit Rayane's Instagram profile"
+              class="mt-6 inline-flex h-12 w-12 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-sm transition-all hover:-translate-y-0.5 hover:text-[var(--instagram-accent)] hover:shadow-md"
+              style={`--instagram-accent: ${siteConfig.accentColor}`}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.8"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="h-6 w-6"
+                aria-hidden="true"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r=".75" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
           </div>
 
           <div class="lg:col-span-8">
